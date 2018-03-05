@@ -1,0 +1,2 @@
+# WebApiCoreAngular
+WebApiCoreAngular project
