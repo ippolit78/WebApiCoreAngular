@@ -1,0 +1,10 @@
+C:\notForEvrthing\testProjectMVC\newF\coreAngApp\bin\Debug\netcoreapp2.0\coreAngApp.deps.json
+C:\notForEvrthing\testProjectMVC\newF\coreAngApp\bin\Debug\netcoreapp2.0\coreAngApp.runtimeconfig.json
+C:\notForEvrthing\testProjectMVC\newF\coreAngApp\bin\Debug\netcoreapp2.0\coreAngApp.runtimeconfig.dev.json
+C:\notForEvrthing\testProjectMVC\newF\coreAngApp\bin\Debug\netcoreapp2.0\coreAngApp.dll
+C:\notForEvrthing\testProjectMVC\newF\coreAngApp\bin\Debug\netcoreapp2.0\coreAngApp.pdb
+C:\notForEvrthing\testProjectMVC\newF\coreAngApp\obj\Debug\netcoreapp2.0\coreAngApp.csproj.CoreCompileInputs.cache
+C:\notForEvrthing\testProjectMVC\newF\coreAngApp\obj\Debug\netcoreapp2.0\coreAngApp.AssemblyInfoInputs.cache
+C:\notForEvrthing\testProjectMVC\newF\coreAngApp\obj\Debug\netcoreapp2.0\coreAngApp.AssemblyInfo.cs
+C:\notForEvrthing\testProjectMVC\newF\coreAngApp\obj\Debug\netcoreapp2.0\coreAngApp.dll
+C:\notForEvrthing\testProjectMVC\newF\coreAngApp\obj\Debug\netcoreapp2.0\coreAngApp.pdb

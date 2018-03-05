@@ -1,0 +1,113 @@
+<div class="back-color">
+    <div class="container">
+        <div class="form">
+            <h2>Personal form</h2><br/>
+            <h3>Please enter your details:</h3>
+            <form [formGroup]="myform" novalidate method="post" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text"
+                        placeholder="Please, input your name here..(min 3 symbols)"
+                        class="form-control"
+                        formControlName="name">
+                    <div *ngIf="name.errors && (name.dirty || name.touched)" class="alert alert-danger">
+                        <div [hidden]="name.valid">
+                            Name is required! Example - Jonh/Jane
+                        </div>
+                    </div>
+                    <div *ngIf="name.valid && (name.dirty || name.touched)" class="alert alert-success">
+                        <div [hidden]="name.invalid">
+                            Done!
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label>Gender</label>
+                    <div class="form-group gender-radio">    
+                        <div class="radio">
+                            <label class="radio-inline">
+                            <input name="gender"
+                                value="man"
+                                type="radio"
+                                formControlName="gender">Man</label>
+                        </div>
+                        <div class="radio">
+                            <label class="btn radio-inline">
+                            <input name="gender"
+                                value="woman"
+                                type="radio"
+                                formControlName="gender">Woman</label>
+                        </div>
+                        <div class="radio">
+                            <label class="btn radio-inline">
+                            <input name="gender"
+                                value=""
+                                ng-checked="true"
+                                type="radio"
+                                formControlName="gender" [checked]= "true">Other</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Birthday</label>
+                    <div class="formGroup">
+                        <input class="form-control" type="date" formControlName="birthday">
+                        <div *ngIf="birthday.errors && (birthday.dirty || birthday.touched)" class="alert alert-danger">
+                            <div [hidden]="birthday.valid">
+                                Birthday is required! Example - 01.01.1970
+                            </div>
+                        </div>
+                        <div *ngIf="birthday.valid && (birthday.dirty || birthday.touched)" class="alert alert-success">
+                            <div [hidden]="birthday.invalid">
+                                Done!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label>Way to travel</label>
+                    <fieldset formGroupName="transport">
+                        <div class="form-group">
+                            <label class="btn">
+                                <input type="checkbox" value="car" formControlName="transportCar"> Car
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="btn">
+                                <input type="checkbox" value="train" formControlName="transportTrain"> Train
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="btn">
+                                <input type="checkbox" value="airplane" formControlName="transportAirplane"> Airplane
+                            </label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    <label>Language</label>
+                    <div class="form-group">
+                        <select class="form-control" formControlName="language">
+                            <option value="">Please select a language..</option>
+                            <option *ngFor="let lang of langs" [value]="lang">
+                                {{lang}} 
+                            </option>
+                        </select>
+                        <div *ngIf="language.errors && (language.dirty || language.touched)" class="alert alert-danger">
+                            <div [hidden]="language.valid">
+                                Language is required! Choose one of the options
+                            </div>
+                        </div>
+                        <div *ngIf="language.valid && (language.dirty || language.touched)" class="alert alert-success">
+                            <div [hidden]="language.invalid">
+                                Done!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button [disabled]="myform.invalid" type="submit" class="btn-lg btn-success btn-block">Confirm</button>
+            </form><br/>
+            <pre>{{ myform.value | json }}</pre>
+        </div>
+    </div>
+</div>
